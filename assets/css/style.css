@@ -21,7 +21,7 @@ body{
     justify-content: center;
     background-color: transparent;
     position: absolute;
-    z-index: 99;
+    z-index: 11;
 }
 #cursor i{
     font-size: 8px;color: #f39a8b;
@@ -35,7 +35,10 @@ section{
     min-height: calc(100vh - 131px);
 
 }
-
+.main-div{
+    width: 100vw;
+    z-index: 99999;
+}
 .main-div::before{
     background-image: url(/assets/img/bg.png);
     position: fixed;
@@ -263,6 +266,7 @@ p.available{
 }
 .scrollspy-slider{
     height: max-content;
+    z-index: 2;
 }
 .scrollspy-slider .list-group {
     position: absolute;
@@ -270,6 +274,7 @@ p.available{
     width: 40px;
     justify-content: space-evenly;
     height: 75vh;
+    z-index: 2;
 }
 @media (max-width:600px) {
     .scrollspy-slider .list-group {
@@ -288,6 +293,7 @@ p.available{
     color: white;
     padding: 0px;
     box-shadow: inset 1px 1px 13px #a5a5a521;
+    z-index: 2;
 }
 .scrollspy-slider .list-group .list-group-item.active{
     background-color: #92929254;
@@ -296,7 +302,7 @@ p.available{
     height: 75vh;
     overflow-y: scroll;
     
-    
+    z-index: 2;
 }
 .scroll-area::-webkit-scrollbar {
     width: 0px;
@@ -304,6 +310,7 @@ p.available{
 .tab-image{
     width: 80%;
     height: 100%;
+    z-index: 2;
 }
 .tab-image img{
     width: 100%;
