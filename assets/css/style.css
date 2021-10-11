@@ -37,7 +37,6 @@ section{
 }
 .main-div{
     width: 100vw;
-    z-index: 99999;
 }
 .main-div::before{
     background-image: url(/assets/img/bg.png);
