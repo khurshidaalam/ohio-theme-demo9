@@ -32,7 +32,7 @@ a{
 section{
     padding: 100px 0;
     position: relative;
-    min-height: calc(100vh - 131px);
+    
 
 }
 .main-div{
@@ -125,7 +125,10 @@ transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
 
 /* section 1  */
 .main-hero{
-    padding-top: 50px;
+    padding-top: 0;
+    height: 93vh;
+    align-items: center;
+    display: flex;
 }
 .play-promo{
     display: flex;
@@ -227,7 +230,7 @@ z-index: 5;
         max-width: 100%;
     }
     .main-hero{
-        height:85vh;
+        height:86vh;
     }
 }
 p.available{
