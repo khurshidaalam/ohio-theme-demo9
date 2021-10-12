@@ -366,6 +366,20 @@ border-radius: 10px !important;
 .feature-right-content{
     height: 100%;
 }
+@media (max-width:600px) {
+    .feature-right-content{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .expected-feature{
+        margin-left: 0;
+    margin-right: 0;
+    }
+    .feature-left{
+        border-right: none;
+        margin-left: 20px;
+    }
+}
 .icon-feature{
     height: 50%;
 }
@@ -522,7 +536,7 @@ h2.faq-title{
     background-repeat: no-repeat;
     background-size: 1.25rem;
     transition: transform .2s ease-in-out;
-    color: pink;
+    
 }
 .accordion-button.collapsed::before {
     background-image: url(../img/plus.PNG);
@@ -540,6 +554,7 @@ h2.faq-title{
     background-image: url(../img//oh__img109.jpg);
     height: 60vh;
     position: relative;
+    width: 100vw;
     background-position: center;
     background-size: cover;
 }
@@ -548,10 +563,20 @@ h2.faq-title{
     bottom: 0;
     display: flex;
 }
+
 .image-only-content{
     background-color: #2d1966;
     width: max-content;
     padding: 40px 80px;
+}
+@media (max-width:600px) {
+    .image-only-container{
+        width: 90%;
+    }
+    .image-only-content{
+        width: 50%;
+        padding: 5px 10px;
+    }
 }
 .image-only-content .counter-box span,.image-only-content h6 {
     color: white;
@@ -584,4 +609,172 @@ background-color: rgba(143, 143, 143, 0.281) !important;
 }
 .review-carousel .owl-nav button span{
     font-size: 30px;
+}
+ /* section 6  */
+ .section-end-maindiv{
+     background-color: rgba(243,154,139,0.15) !important;
+     border-radius: 10px;
+ }
+ .end-sect-left{
+     padding: 80px 0;
+ }
+ .end-sect-left h2.subtitle-top{
+    font-size: 40px;font-family: 'Space Grotesk', sans-serif ;
+}
+.app-store{
+    width: 150px;
+    height: 53px;
+    border-radius: 5px;
+}
+.end-sect-left .app-store p{
+    display: none;
+}
+.end-sect-left .app-store:hover img{
+ display: none;
+}
+.end-sect-left .app-store:hover {
+    background-color: #f39a8b;
+}
+.end-sect-left .app-store:hover p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition:0.5s ease-in-out ;
+}
+.sect-end-image{
+    width: 100%;
+    height: 100%;
+    padding-right: 90px;
+}
+.sect-end-image img{
+    width: 100%;
+    height: 100%;
+}
+.textwidget{
+    margin-top: 20px;
+
+}
+.textwidget a{
+   color: currentColor;
+    padding: 0 10px;
+}
+.textwidget a.fb{
+    padding-left: 0;
+ }
+
+ul{
+    list-style: none;
+}
+h3.widget-title {
+    text-align: inherit;
+    line-height: inherit;
+    margin: 0 0 20px;
+    font-weight: 600;
+    letter-spacing: 0;
+    color: rgba(52,29,116,0.4);font-size: 16px;
+}
+
+.widget_text input{
+    border: none;
+    background-color: rgba(182, 182, 182, 0.199);
+    padding: 13px;
+    border-radius: 5px 0 0 5px;
+}
+.widget_text input:focus{
+   outline: none;
+}
+.email-signup{
+    display: flex;
+   
+}
+.email-signup button{
+    padding: 0 5px;
+    border: none; 
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0  5px  5px 0;
+    
+}
+.email-signup button:hover{
+    background-color: #f39a8b;
+    color: white;
+    transition: 0.5s;
+}
+
+/* footer  */
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    padding: 40px 0;
+    border-top: 1px solid rgba(168, 168, 168, 0.247);
+}
+.footer-content p{
+    margin-bottom: 0 !important;
+}
+@media (max-width:600px) {
+    .footer-content{
+        flex-direction: column;
+    }
+
+    }
+
+/* xtraaaaaa................................ */
+.follow-us{
+    position: fixed;
+    right: -40px;
+    z-index: 9999;
+    transform: rotate(-90deg);
+    top: 50%;
+}
+@media (max-width:600px) {
+    .follow-us{
+        right: -80px;
+    }
+}
+.follow-us a{
+    padding: 0 10px;
+    color: currentColor;
+}
+
+.toast:not(.show) {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 40%;
+    z-index: 11111;
+}
+
+.toast.show{
+    border: block !important;
+}
+.toast-body{
+    display: flex;
+    background-color: rgb(243, 243, 243);
+    padding: 20px;
+    width: max-content;
+    border-radius: 5px !important;
+}
+.toast-body p{
+    margin-bottom: 0;
+    margin-right: 20px;
+    
+}
+@media (max-width:600px) {
+    .toast:not(.show) {
+        left: 0;
+    }
+    .toast{
+        width: 80%;
+    }
+    .toast-body{
+        width: 100%;
+    }
+    .toast-body p{
+        margin-bottom: 0;
+        margin-right: 0;
+        
+    }
 }
