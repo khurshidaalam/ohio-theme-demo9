@@ -39,7 +39,7 @@ section{
     width: 100vw;
 }
 .main-div::before{
-    background-image: url(/assets/img/bg.png);
+    background-image: url(../img/bg.png);
     position: fixed;
     z-index: 0.5;
     height: 100%;
