@@ -38,6 +38,9 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
         integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- aos css  -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
 </head>
 
 <body>
@@ -57,13 +60,13 @@
         </div>
 
 
-
+        <!-- header nav  -->
         <header class="main-header">
             <div class="container header-div">
                 <div class="left-part d-flex">
-                    <a href="" class="hamburger-icon">
+                    <button class="hamburger-icon" onclick=dropdown()>
                         <i class="fas fa-equals"></i>
-                    </a>
+                    </button>
                     <div class="logo">
                         <img src="./assets/img/ohioService.svg" alt="logo" />
                     </div>
@@ -80,32 +83,78 @@
                     </ul>
                 </div>
             </div>
-
-        </header>
-        <section class="main-hero">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-md-6 col-lg-6 px-md-5">
-                        <div class="play-promo">
-                            <a href="" class="play-btn">
-                                <i class="fas fa-play"></i>
-                            </a>
-                            <h6>play promo</h6>
-
-                        </div>
-                        <h1 class="banner-header">
-                            Get more,<br />
-                            make less.
-                        </h1>
-                        <p class="banner-para">A mobile Data tracking experience for your online bisuness budget.</p>
-                        <p class="available">Available now</p>
-                        <div class="app-store">
-                            <img src="./assets/img/AppStore.png" alt="appstore" />
+            <div class="dropdown-nav-div" >
+                <div class="container-fluid">
+                    <div class="dropdown-content">
+                        <i class="fas fa-times" onclick=closeNav()></i>
+                        <ul class="navbar-menu-dropdown">
+                            <li class="nav-item"><span>pages</span></li>
+                            <li class="nav-item"><span>projects</span></li>
+                            <li class="nav-item"><span>blog</span></li>
+                            <li class="nav-item"><span>shop</span></li>
+                            <li class="nav-item"><span>purchase</span></li>
+                        </ul>
+                        <div class="dropdown-footer">
+                            <div class="row">
+                                <div class="footer-content d-flex d-md-none">
+                                    <p>© 2021, Ohio Theme. Made with passion by Colabrio |</p>
+                                    <p>Privacy & Cookie Policy | Terms of Service</p>
+                                </div>
+                                <div class="col-12 col-md-3 d-none d-md-block">
+                                    <div class="address">
+                                        <b>Get In Touch</b><br> 541 Melville Ave, Palo Alto, CA 94301,<br/>
+                                        ask@ohio.colabr.io<br/> Ph: +1.831.705.5448
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-3 d-none d-md-block">
+                                    <div class="address" >
+                                        <b>Work Inquiries</b><br/>
+                                        work@ohio.colabr.io<br/>
+                                        Ph: +1.831.306.6725
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-3 d-none d-md-block">
+                                    <div class="social-icons" >
+                                        <i class="fab fa-facebook-f"></i>
+                                        <i class="fab fa-twitter"></i>
+                                        <i class="fab fa-instagram"></i>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="d-none d-md-block col-md-6 col-lg-6 px-5">
-                        <div class="mobile-image">
-                            <img src="./assets/img/mobile.png" />
+                </div>
+            </div>
+        </header>
+        <!-- header ends  -->
+
+        <section class="main-hero">
+            <div class="container">
+                <div class="main-div-content">
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-lg-6 px-md-5">
+                            <div class="play-promo">
+                                <a href="" class="play-btn">
+                                    <i class="fas fa-play"></i>
+                                </a>
+                                <h6>play promo</h6>
+
+                            </div>
+                            <h1 class="banner-header">
+                                Get more,<br />
+                                make less.
+                            </h1>
+                            <p class="banner-para">A mobile Data tracking experience for your online bisuness budget.
+                            </p>
+                            <p class="available">Available now</p>
+                            <div class="app-store">
+                                <img src="./assets/img/AppStore.png" alt="appstore" />
+                            </div>
+                        </div>
+                        <div class="d-none d-md-block col-md-6 col-lg-6 px-5">
+                            <div class="mobile-image">
+                                <img src="./assets/img/mobile.png" />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -142,7 +191,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="list-item-2" class="list-item">
+                    <div id="list-item-2" class="list-item py-5">
                         <div class="row">
                             <div class="col-12 col-md-6 col-lg-6">
                                 <div class="tab-image">
@@ -331,7 +380,7 @@
                             <ul class="pricing-list">
                                 <li><i class="fas fa-check"></i> Unlimited updates & projects</li>
                                 <li><i class="fas fa-check"></i> Custom permissions</li>
-                                <li><i class="fas fa-times cross"></i>
+                                <li class="blur-para"><i class="fas fa-times cross"></i>
                                     <p> Custom Infrastructure</p>
                                 </li>
                             </ul>
@@ -378,17 +427,17 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-6">
-                        <div class="accordion" id="accordionPanelsStayOpenExample">
+
+                        <div class="accordion" id="accordionExample">
                             <div class="accordion-item">
-                                <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                                <h2 class="accordion-header" id="headingOne">
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
-                                        aria-controls="panelsStayOpen-collapseOne">
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                         <h6>How does the 14-day trial work?</h6>
                                     </button>
                                 </h2>
-                                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
-                                    aria-labelledby="panelsStayOpen-headingOne">
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
                                         When our team provides design and digital marketing. Applied arts can include
                                         industrial design, graphic design, fashion design. The app provides design and
@@ -397,15 +446,14 @@
                                 </div>
                             </div>
                             <div class="accordion-item">
-                                <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                                <h2 class="accordion-header" id="headingTwo">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
-                                        aria-controls="panelsStayOpen-collapseTwo">
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                         <h6>How do I pay for your service?</h6>
                                     </button>
                                 </h2>
-                                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
-                                    aria-labelledby="panelsStayOpen-headingTwo">
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
                                         When our team provides design and digital marketing. Applied arts can include
                                         industrial design, graphic design, fashion design. The app provides design and
@@ -414,15 +462,15 @@
                                 </div>
                             </div>
                             <div class="accordion-item">
-                                <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                                <h2 class="accordion-header" id="headingThree">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
-                                        aria-controls="panelsStayOpen-collapseThree">
+                                        data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
                                         <h6>How can I cancel my subscription?</h6>
                                     </button>
                                 </h2>
-                                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
-                                    aria-labelledby="panelsStayOpen-headingThree">
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
                                         When our team provides design and digital marketing. Applied arts can include
                                         industrial design, graphic design, fashion design. The app provides design and
@@ -431,15 +479,15 @@
                                 </div>
                             </div>
                             <div class="accordion-item">
-                                <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+                                <h2 class="accordion-header" id="headingFour">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
-                                        aria-controls="panelsStayOpen-collapseFour">
+                                        data-bs-target="#collapseFour" aria-expanded="false"
+                                        aria-controls="collapseFour">
                                         <h6>How can I cancel my subscription?</h6>
                                     </button>
                                 </h2>
-                                <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
-                                    aria-labelledby="panelsStayOpen-headingFour">
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                    data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
                                         When our team provides design and digital marketing. Applied arts can include
                                         industrial design, graphic design, fashion design. The app provides design and
@@ -458,7 +506,7 @@
                 <div class="image-only-container">
                     <div class="req-per-sec image-only-content">
                         <div class="counter-box">
-                            <i class="fas fa-braille"></i>
+                            <i class="fas fa-braille"></i><br />
                             <span>236</span>
                             <span class="plus">+</span>
                         </div>
@@ -469,7 +517,7 @@
                     </div>
                     <div class="req-per-sec image-only-content ioc-2">
                         <div class="counter-box">
-                            <i class="fas fa-braille"></i>
+                            <i class="fas fa-braille"></i><br />
                             <span>9346</span>
                             <span class="plus">+</span>
 
@@ -702,9 +750,9 @@
 
 
     <!-- jquery  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    
 
     <!-- bootstrap  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.min.js"
@@ -715,6 +763,11 @@
         var scrollSpy = bootstrap.ScrollSpy.getInstance(scrollSpyContentEl) // Returns a Bootstrap scrollspy instance
     </script>
 
+    <!-- counter  -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous">
+        </script>
+    <script src="js/jquery.numscroll.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
         integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
@@ -779,6 +832,26 @@
 
         }
     </script>
+
+    <script>
+        const dropdownNav = document.querySelector(".dropdown-nav-div");
+        function dropdown() {
+            dropdownNav.classList.add("show");
+        }
+        function closeNav() {
+            dropdownNav.classList.remove("show");
+        }
+        // const navIcon = document.querySelector(".hamburger-icon");
+
+        // navIcon.addEventListener(,)
+
+    </script>
+
+    <!-- aos js 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        AOS.init();
+    </script> -->
 </body>
 
 </html>
