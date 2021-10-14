@@ -26,12 +26,12 @@ h2{
     border: 1px solid #f39a8b;
     background-color: transparent;
     position: absolute;
-    transition: 0.4s ease;
+    transition: 0.2s ease;
 }
 .pointer-dot{
     font-size: 8px;color: #f39a8b;
     position: absolute;
-    transition: 0.2s ease;
+    transition: 0.1s ease;
 }
 a{
     text-decoration: none !important;
@@ -166,7 +166,7 @@ transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
     height: 100vh;
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.979);
-    z-index: 999999999999;
+    z-index: 99999;
     top: 0;
     display: none;
     transition: 0.5s;
@@ -315,8 +315,9 @@ transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
 }
 @media (max-width:600px) {
     .dropdown-nav-div{
-        width: 85%;
+        width: 100%;
         background-color: #fff;
+        overflow-y: scroll;
     }
     .navbar-menu-dropdown{
     }
@@ -327,6 +328,7 @@ transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
     .navbar-menu-dropdown li span{
         color: #341d74e0 !important;
         font-size: 16px !important;
+        font-weight: bold !important;
     }
     .navbar-menu-dropdown li span:after{
         content: none;
@@ -344,6 +346,43 @@ transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
         align-items: center;
         justify-content: center;
     }
+    .dropdown-footer {
+        position: relative;
+        border:none !important;
+    }
+    .dropdown-footer .footer-content{
+        border:none !important;
+        width: 85%;
+    }
+}
+.accordion-flush{
+    width: 85%;
+}
+.accordion-flush h2{
+    color: blue !important;
+}
+.accordion-flush .accordion-button::before{
+    content: none;
+}
+.accordion-flush .accordion-button::after{
+    content: "x" !important;
+    color: black !important;
+    font-size: 16px;
+    width: 1.2rem;
+    height: 1.2rem;
+    background-image: none !important;
+
+}
+.accordion-flush .accordion-button.collapsed::after{
+    content: "+" !important;
+    color: black !important;
+    font-size: 16px;
+    width: 1.2rem;
+    height: 1.2rem;
+    background-image: none !important;
+}
+.accordion-flush .accordion-button.docs::after{
+content: none !important;
 }
 
 /* @keyframes fadeUp {
@@ -1023,9 +1062,36 @@ h3.widget-title {
 .follow-us{
     position: fixed;
     right: -40px;
-    z-index: 999;
+    z-index: 11;
     transform: rotate(-90deg);
     top: 50%;
+}
+.follow-us p{
+    margin-bottom: 0 !important;
+    color: #fff !important;
+}
+
+.mini{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    width: 100vh;
+    height: 50px;
+    top: 47%;
+    position: absolute;
+    right: -101% !important;
+    transition: 0.5s;
+    animation-name: light;
+    animation-duration: 0.5s;
+}
+@keyframes light {
+    from {
+        right: -20%;
+    }
+    to{
+        right: -101%
+    }
 }
 @media (max-width:600px) {
     .follow-us{
