@@ -1080,19 +1080,9 @@ h3.widget-title {
     height: 50px;
     top: 47%;
     position: absolute;
-    right: -101% !important;
-    transition: 0.5s;
-    animation-name: light;
-    animation-duration: 0.5s;
+    right: -100% !important;
 }
-@keyframes light {
-    from {
-        right: -20%;
-    }
-    to{
-        right: -101%
-    }
-}
+
 @media (max-width:600px) {
     .follow-us{
         right: -80px;
