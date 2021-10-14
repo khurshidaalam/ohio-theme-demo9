@@ -26,12 +26,12 @@ h2{
     border: 1px solid #f39a8b;
     background-color: transparent;
     position: absolute;
-    transition: 0.4s;
+    transition: 0.4s ease;
 }
 .pointer-dot{
     font-size: 8px;color: #f39a8b;
     position: absolute;
-    transition: 0.2s;
+    transition: 0.2s ease;
 }
 a{
     text-decoration: none !important;
@@ -364,6 +364,10 @@ transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
     align-items: center;
     display: flex;
 }
+.main-div-content{
+    position: relative;
+    margin: auto;
+}
 .play-promo{
     display: flex;
     justify-content: start;
@@ -490,11 +494,15 @@ p.available{
 }
 .mobile-image {
     height: 60vh;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
 }
 .mobile-image img {
-    position: relative;
-    right: 102px;
+    position: absolute;
     height: 100%;
+    right: 20px;
+    transition: 0.5s;
 }
 .mobile-image::before {
     width: 400px;
