@@ -988,6 +988,9 @@ h3.widget-title {
     color: white;
     transition: 0.5s;
 }
+.app-store p{
+    margin-bottom: 0 !important;
+}
 
 /* footer  */
 .footer-content{
