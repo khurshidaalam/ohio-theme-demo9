@@ -1080,9 +1080,14 @@ h3.widget-title {
     height: 50px;
     top: 47%;
     position: absolute;
-    right: -100% !important;
+    right: -101% !important;
 }
-
+@media (max-width:350px) {
+    .mini{
+        right: -84% !important;
+        top: 45%;
+    }
+}
 @media (max-width:600px) {
     .follow-us{
         right: -80px;
