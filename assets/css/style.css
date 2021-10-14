@@ -1081,6 +1081,7 @@ h3.widget-title {
     top: 47%;
     position: absolute;
     left: -15% !important;
+    
 }
 @media (max-width:350px) {
     .mini{
