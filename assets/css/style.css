@@ -315,7 +315,7 @@ transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
 }
 @media (max-width:600px) {
     .dropdown-nav-div{
-        width: 100%;
+        width: 85%;
         background-color: #fff;
         overflow-y: scroll;
     }
@@ -1080,8 +1080,8 @@ h3.widget-title {
     height: 50px;
     top: 47%;
     position: absolute;
-    left: -15% !important;
-    
+    left: -28% !important;
+
 }
 @media (max-width:350px) {
     .mini{
