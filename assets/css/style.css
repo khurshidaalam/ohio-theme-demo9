@@ -1080,11 +1080,11 @@ h3.widget-title {
     height: 50px;
     top: 47%;
     position: absolute;
-    right: -101% !important;
+    left: -15% !important;
 }
 @media (max-width:350px) {
     .mini{
-        right: -84% !important;
+        left: 0% !important;
         top: 45%;
     }
 }
