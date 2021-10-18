@@ -5,7 +5,34 @@
     color: #341d74;
     font-family: "Space Grotesk Bold", -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     cursor: default;
+    
 }
+body #magicMouseCursor {
+    border: 1px solid #f39a8b !important;
+}
+    body #magicMouseCursor.cursor-square {
+      border-radius: 50% !important; 
+    }
+    body #magicPointer {
+        background: #f39a8b !important;
+    }
+        body #magicPointer.is-hover {
+            background: #f39b8b79 !important;
+            width:30px !important;
+            height: 30px !important;
+         }
+         body #magicPointer.pointer-blur {
+            height: 50px;
+            width: 50px;
+            background: none;
+            border: 1px solid #f39a8b !important;
+            box-shadow: 0px 0px 15px -5px #f39a8b !important; 
+        }
+          body #magicPointer.pointer-overlay {
+            height: 50px;
+            width: 50px;
+            mix-blend-mode: difference;
+            box-shadow: 0px 0px 15px -5px #f39a8b !important; }
 body{
     width: 100vw;
     overflow-x: hidden;
@@ -102,6 +129,7 @@ button.hamburger-icon{
     border: none;
     background-color: transparent;
 }
+
 .hamburger-icon i{
 
 color: inherit;
@@ -123,6 +151,7 @@ transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
 }
 .hamburger-icon i:hover{
     background-color: rgba(136, 136, 136, 0.03);
+    color: #f39a8b;
 }
 @media (min-width: 769px){
 .hamburger-icon {
@@ -166,9 +195,9 @@ transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
     height: 100vh;
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.979);
-    z-index: 99999;
+    visibility: hidden;
     top: 0;
-    display: none;
+    opacity: 0;
     transition: 0.5s;
     animation-name: fadeZoom;
     animation-duration: 0.5s;
@@ -176,8 +205,8 @@ transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
     
 }
 .dropdown-nav-div.show{
-    display: block;
-    
+    opacity: 1;
+    visibility: visible;
 }
 @keyframes fadeZoom {
     from{
@@ -185,6 +214,26 @@ transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
     }
     to{
         opacity: 1;
+        z-index: 99999;
+    }
+}
+.zoomout{
+    transition: 0.3s;
+    animation-name: zoomout;
+    animation-duration: 0.5s;
+    animation-direction: normal;
+    opacity: 0;
+    z-index: 0;
+    visibility: hidden;
+}
+@keyframes zoomout {
+    from{
+        opacity: 1;
+        z-index: 99999;
+    }
+    to{
+        opacity: 0;
+        z-index: 0;
     }
 }
 .dropdown-content{
@@ -193,8 +242,9 @@ transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
 }
 .dropdown-content i{
     color: white !important;
+    padding: 12px 14px;
+    border-radius: 50%;
 }
-
 
 .navbar-menu-dropdown{
     width: 25%;
@@ -991,6 +1041,11 @@ background-color: rgba(143, 143, 143, 0.281) !important;
    color: currentColor;
     padding: 0 10px;
 }
+.textwidget a:hover body #magicPointer{
+    background: #f39b8b79 !important;
+    width:30px !important;
+    height: 30px !important;
+ }
 .textwidget a.fb{
     padding-left: 0;
  }
@@ -1138,3 +1193,23 @@ h3.widget-title {
         
     }
 }
+/* }
+.close-nav{
+    transition: 0.3s;
+    animation-name: spread;
+    animation-direction: normal;
+}
+@keyframes spread {
+    0%{
+        border: 10px solid #f39a8b !important;
+        opacity: 1 !important;
+    }
+    50%{
+        border: 20px solid #f39a8b !important;
+        opacity: 0.5 !important;
+    }
+    100%{
+        border: 30px solid #f39a8b !important;
+        opacity: 0 !important;
+    }
+} */

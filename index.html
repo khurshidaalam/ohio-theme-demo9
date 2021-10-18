@@ -41,6 +41,13 @@
 
     <!-- aos css  -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+
+    <!-- magic mouse  -->
+    <link rel="stylesheet" href="https://res.cloudinary.com/veseylab/raw/upload/v1629862837/magicmouse/magic-mouse-1.2.css" />
+    
+  
+
+
 </head>
 
 <body>
@@ -64,7 +71,7 @@
         <header class="main-header">
             <div class="container header-div">
                 <div class="left-part d-flex">
-                    <button class="hamburger-icon" onclick=dropdown()>
+                    <button class="hamburger-icon magic-hover magic-hover__square" onclick=dropdown() >
                         <i class="fas fa-equals"></i>
                     </button>
                     <div class="logo">
@@ -86,7 +93,7 @@
             <div class="dropdown-nav-div">
                 <div class="container-fluid">
                     <div class="dropdown-content">
-                        <i class="fas fa-times" onclick=closeNav()></i>
+                        <i class="fas fa-times close-nav magic-hover" onclick=closeNav()></i>
                         <ul class="navbar-menu-dropdown d-none d-md-block">
                             <li class="nav-item"><span>pages</span></li>
                             <li class="nav-item"><span>projects</span></li>
@@ -865,12 +872,12 @@
         var cursor = document.getElementById("cursor");
         var pointer = document.querySelector(".pointer-dot");
 
-        document.onmousemove = function (e) {
-            cursor.style.left = (e.pageX - 15) + "px";
-            cursor.style.top = (e.pageY - 15) + "px";
-            pointer.style.left = (e.pageX - 4) + "px";
-            pointer.style.top = (e.pageY - 4) + "px";
-        }
+        // document.onmousemove = function (e) {
+        //     cursor.style.left = (e.pageX - 15) + "px";
+        //     cursor.style.top = (e.pageY - 15) + "px";
+        //     pointer.style.left = (e.pageX - 4) + "px";
+        //     pointer.style.top = (e.pageY - 4) + "px";
+        // }
 
         var mobileArea = document.querySelector(".mobile-image");
         var mobile = document.querySelector("#mobile");
@@ -890,6 +897,9 @@
         });
 
     </script>
+
+
+
 
 
 
@@ -936,7 +946,15 @@
                 }
             }
         })
+        var owlprev = document.querySelector(".owl-prev");
+        owlprev.classList.add("magic-hover");
+
+        var owlnxt = document.querySelector(".owl-next");
+        owlnxt.classList.add("magic-hover");
         
+
+
+
     </script>
     <script>
         window.onscroll = function () { scrollFunction() };
@@ -960,6 +978,8 @@
     <script>
         const dropdownNav = document.querySelector(".dropdown-nav-div");
         const followUs = document.querySelector(".follow-us");
+        const cross = document.querySelector(".close-nav");
+
         function dropdown() {
             dropdownNav.classList.add("show");
             followUs.style.opacity = 0;
@@ -971,10 +991,14 @@
                 followUs.classList.remove("mini"); 
             }
             
-
+            
+            
         }
+        
         function closeNav() {
-            dropdownNav.classList.remove("show");
+            cross.classList.add(".close-nav")
+                dropdownNav.classList.add("zoomout");
+                dropdownNav.classList.remove("show");
             followUs.classList.remove("mini");
             followUs.style.opacity = 1;
         }
@@ -989,6 +1013,26 @@
     <script>
         AOS.init();
     </script> -->
+
+
+<!-- magic mouse  -->
+<script type="text/javascript" src="https://res.cloudinary.com/veseylab/raw/upload/v1629862837/magicmouse/magic_mouse-1.2.js"></script>
+
+
+    <script type="text/javascript">
+    options = {
+	"cursorOuter": "circle-basic",
+	"hoverEffect": "circle-move",
+	"hoverItemMove": false,
+	"defaultCursor": false,
+	"outerWidth": 30,
+	"outerHeight": 30
+      };
+    magicMouse(options);
+
+
+</script>
+
 </body>
 
 </html>
